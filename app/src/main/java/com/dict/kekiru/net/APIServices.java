@@ -1,6 +1,7 @@
 package com.dict.kekiru.net;
 
 import com.dict.kekiru.model.TestObject;
+import com.dict.kekiru.net.response.TestResponse;
 
 import java.util.Map;
 
@@ -15,5 +16,5 @@ import retrofit2.http.POST;
 public interface APIServices {
     @FormUrlEncoded
     @POST(APIDefinition.TestApi.PATH)
-    Call<APIResponse<TestObject>> testFunction(@FieldMap Map<String, String> testParrams);
+    Call<APIResponse<TestResponse>> testFunction(@FieldMap Map<String, String> testParrams);
 }

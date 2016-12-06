@@ -1,6 +1,7 @@
 package com.dict.kekiru.net;
 
 import com.dict.kekiru.model.TestObject;
+import com.dict.kekiru.net.response.TestResponse;
 
 import java.util.Map;
 
@@ -20,7 +21,7 @@ public abstract class API {
 
 
     public static void testFunction(Map<String, String> testParams ,
-                                    final APICallback<APIResponse<TestObject>> callback) {
+                                    final APICallback<APIResponse<TestResponse>> callback) {
         client
                 .testFunction(testParams)
                 .enqueue(new RetrofitCallback<>(callback));
